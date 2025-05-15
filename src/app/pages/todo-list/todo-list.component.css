@@ -1,0 +1,115 @@
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    color: #2d3436;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .fab-button {
+    background: #0984e3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(9, 132, 227, 0.3);
+    transition: transform 0.2s;
+  }
+  
+  .fab-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .todo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .todo-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    border-left: 4px solid;
+  }
+  
+  .todo-card.completed {
+    opacity: 0.6;
+    background: #f8f9fa;
+  }
+  
+  .todo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .priority-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .priority-dot.low { background: #00b894; }
+  .priority-dot.medium { background: #fdcb6e; }
+  .priority-dot.high { background: #d63031; }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .card-header h3 {
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .actions button {
+    background: none;
+    border: none;
+    color: #636e72;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .due-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #636e72;
+  }
+  
+  .delete-btn {
+    color: #ff7675;
+    transition: color 0.2s;
+  }
+  
+  .delete-btn:hover {
+    color: #d63031;
+  }

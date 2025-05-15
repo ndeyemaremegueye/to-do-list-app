@@ -1,0 +1,43 @@
+<div class="container">
+    <header>
+      <h1>My Tasks</h1>
+      <a routerLink="/add" class="fab-button">
+        <span class="material-icons">add</span>
+      </a>
+    </header>
+  
+    <div class="filters">
+      <div class="filter-chip" *ngFor="let priority of priorities">
+        {{ priority }}
+      </div>
+    </div>
+  
+    <div class="todo-grid">
+      <div *ngFor="let todo of todos" class="todo-card" [class.completed]="todo.completed">
+        <div class="card-header">
+          <span class="priority-dot" [class]="todo.priority"></span>
+          <h3>{{ todo.title }}</h3>
+          <div class="actions">
+            <button (click)="toggleComplete(todo.id)">
+              <span class="material-icons">{{ todo.completed ? 'check_box' : 'check_box_outline_blank' }}</span>
+            </button>
+            <a [routerLink]="['/edit', todo.id]" class="edit-btn">
+              <span class="material-icons">edit</span>
+            </a>
+          </div>
+        </div>
+        
+        <p class="description">{{ todo.description }}</p>
+        
+        <div class="card-footer">
+          <span class="due-date">
+            <span class="material-icons">event</span>
+            {{ todo.dueDate | date }}
+          </span>
+          <button class="delete-btn" (click)="deleteTodo(todo.id)">
+            <span class="material-icons">delete</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
