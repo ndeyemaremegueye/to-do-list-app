@@ -1,0 +1,6 @@
+projectKey=todolistapp
+serverUrl=http://localhost:9000
+serverVersion=25.5.0.107428
+dashboardUrl=http://localhost:9000/dashboard?id=todolistapp
+ceTaskId=e56e4b3f-ecd7-4b97-aab3-b3c0f6183b22
+ceTaskUrl=http://localhost:9000/api/ce/task?id=e56e4b3f-ecd7-4b97-aab3-b3c0f6183b22

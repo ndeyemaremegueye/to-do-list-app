@@ -9,5 +9,6 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-app';
+  title = 'todo-app app is running!';
 }
+
